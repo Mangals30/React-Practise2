@@ -1,0 +1,23 @@
+.title-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.title-year {
+    margin-left: 20px;
+    font-size: 5rem;
+    color: blueviolet;
+}
+.sub-title {
+    display: flex;
+    justify-content: center;
+}
+.date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cadetblue;
+    height: 3rem;
+    font-size: 20px;
+}

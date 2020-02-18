@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import Header from './components/Header'
+import Main from './components/Main'
+import dateToday from './date'
 import './App.css';
 
-function App() {
+const App = () => {
+ const title = 'My Experience as of' 
+ const titleYear = new Date().getFullYear()
+ const subTitle = 'Professional Summary'
+ const dateTitle = dateToday()
+ const companies = ['Infosys Technologies Ltd.','NTT Data','Aris Global','Cryptograph Technologies','Integrify Study Academy']
+const companySet = companies.map(company => <div class = "company">{company.toUpperCase()}</div>)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  <div class = "wrapper">
+    <Header
+      title = {title.toUpperCase()}
+      titleYear = {titleYear}
+      subTitle = {subTitle}
+      dateTitle = {dateTitle}
+    />
+    <Main
+      companySet = {companySet}
+    />
+  </div>)
 }
 
 export default App;
